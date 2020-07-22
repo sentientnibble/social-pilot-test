@@ -1,0 +1,84 @@
+.body-container {
+  background-color: #ede9f2;
+  height: 100vh;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.form-textarea {
+  border-color: #d2d6dc;
+  background-color: #fff;
+  border-width: 1px;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.dropzone-container {
+  flex: 1;
+  display: "flex";
+  flex-direction: "column";
+  align-items: "center";
+  padding: "20px";
+  border-width: 2;
+  border-radius: 2;
+  border-color: "#eeeeee";
+  border-style: "dashed";
+  background-color: "#fafafa";
+  color: "#bdbdbd";
+  outline: "none";
+  transition: "border .24s ease-in-out";
+}
+.disable {
+  cursor: default !important;
+  opacity: 0.3;
+}
+
+/* Checkbox for image styling */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.thumb-container label {
+  border: 1px solid #fff;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.thumb-container label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+.thumb-container :checked + label {
+  border-color: #ddd;
+}
+
+.thumb-container :checked + label:before {
+  content: "✓";
+  background-color: #22543d;
+  transform: scale(1);
+  z-index: 99;
+}
+
+.thumb-container :checked + label img {
+  transform: scale(0.9);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
+}
